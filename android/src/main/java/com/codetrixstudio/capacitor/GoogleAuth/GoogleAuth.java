@@ -139,7 +139,7 @@ public class GoogleAuth extends Plugin {
       }.execute();
 
     } catch (ApiException e) {
-      signInCall.error("Something went wrong", e);
+      signInCall.error("Something went wrong", "" + e.getStatusCode(), e);
     }
   }
 
